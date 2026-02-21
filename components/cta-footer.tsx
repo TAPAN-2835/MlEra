@@ -194,7 +194,7 @@ export default function CTAFooter() {
           {/* Bottom Footer */}
           <div className="flex flex-col sm:flex-row items-center justify-between pt-8 border-t border-border gap-4">
             <p className="text-muted-foreground text-xs">
-              © 2025 MLera. All rights reserved.
+              © {new Date().getFullYear()} MLera. All rights reserved.
             </p>
             <div className="flex gap-3">
               {socialLinks.map((social, index) => {

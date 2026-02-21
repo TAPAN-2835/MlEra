@@ -3,8 +3,8 @@
 Designed and developed as a premium landing page for **MLera**, a structured Machine Learning learning platform currently under development at **IIIT Dharwad Research Park (IDRP)**.
 
 ### Links
-- **GitHub Repository**: [github.com/username/mlera](https://github.com/username/mlera)
-- **Live Demo**: [mlera-landing.vercel.app](https://mlera-landing.vercel.app) *(Placeholder)*
+- **GitHub Repository**: [https://github.com/TAPAN-2835/MlEra](https://github.com/TAPAN-2835/MlEra)
+- **Live Demo**: [https://ml-era-vert.vercel.app/](https://ml-era-vert.vercel.app/)
 
 ---
 
