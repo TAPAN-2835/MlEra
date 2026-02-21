@@ -81,8 +81,7 @@ Introduce an interactive widget where users can search for any complex term (e.g
 ### Local Development
 ```bash
 # Clone the repository
-git clone https://github.com/username/mlera.git
-
+git clone https://github.com/TAPAN-2835/MlEra.git
 # Install dependencies
 npm install
 
@@ -112,4 +111,4 @@ npm start
 
 ---
 
-Built under **IIIT Dharwad Research Park** | © 2025 MLera
+Built under **IIIT Dharwad Research Park** | © 2026 MLera
