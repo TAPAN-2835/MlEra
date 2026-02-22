@@ -6,12 +6,15 @@ import { useState, useRef } from 'react';
 
 export default function BrandVideoSection() {
     const [isPlaying, setIsPlaying] = useState(false);
+    const [hasStarted, setHasStarted] = useState(false);
+    const [isSeeking, setIsSeeking] = useState(false);
     const videoRef = useRef<HTMLVideoElement>(null);
 
     const handlePlay = () => {
         if (videoRef.current) {
             videoRef.current.play();
             setIsPlaying(true);
+            setHasStarted(true);
         }
     };
 
@@ -46,12 +49,20 @@ export default function BrandVideoSection() {
                             <video
                                 ref={videoRef}
                                 className="w-full h-full bg-black"
-                                controls={isPlaying}
+                                controls={hasStarted || isPlaying}
                                 preload="metadata"
                                 playsInline
-                                onPlay={() => setIsPlaying(true)}
+                                onPlay={() => {
+                                    setIsPlaying(true);
+                                    setHasStarted(true);
+                                }}
                                 onPause={() => setIsPlaying(false)}
-                                onEnded={() => setIsPlaying(false)}
+                                onSeeking={() => setIsSeeking(true)}
+                                onSeeked={() => setIsSeeking(false)}
+                                onEnded={() => {
+                                    setIsPlaying(false);
+                                    setHasStarted(false);
+                                }}
                             >
                                 <source src="/branding-video.mp4" type="video/mp4" />
                                 Your browser does not support the video tag.
@@ -59,7 +70,7 @@ export default function BrandVideoSection() {
 
                             {/* Creative Play overlay for branding video */}
                             <AnimatePresence>
-                                {!isPlaying && (
+                                {!isPlaying && !hasStarted && !isSeeking && (
                                     <motion.div
                                         initial={{ opacity: 0 }}
                                         animate={{ opacity: 1 }}
