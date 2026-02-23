@@ -108,8 +108,10 @@ export default function AboutMLera() {
                     <div className="text-sm font-medium text-primary mb-1.5">Foundations (Week 1-2)</div>
                     <div className="h-1.5 bg-primary/15 rounded-full overflow-hidden">
                       <motion.div
-                        animate={{ width: ['0%', '100%', '0%'] }}
-                        transition={{ duration: 4, repeat: Infinity, ease: 'easeInOut' }}
+                        initial={{ width: '0%' }}
+                        whileInView={{ width: '100%' }}
+                        transition={{ duration: 1.5, ease: 'easeInOut' }}
+                        viewport={{ once: true }}
                         className="h-full bg-gradient-to-r from-primary to-accent rounded-full"
                       />
                     </div>
